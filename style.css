@@ -1,5 +1,4 @@
-
-  .title{
+.title{
     text-align: center;
     margin-top: 25px;
   }
@@ -13,6 +12,7 @@
   input[type='submit'], button, [aria-label]{
     cursor: pointer;
   }
+  
   #edit-box{
     display: none;
     max-width: 80%;
@@ -29,4 +29,3 @@
   .to-do{
       background: transparent !important;
   }
- 
