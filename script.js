@@ -4,7 +4,7 @@ var app = new function() {
 
   this.tasks = [];
 
-  
+  // Read
   
   this.FetchAll = function() {
     var data = '';
@@ -23,6 +23,8 @@ var app = new function() {
     return this.el.innerHTML = data;
   };
 
+  // Create
+
   this.Add = function () {
     el = document.getElementById('add-todo');
     // Get the value
@@ -37,6 +39,8 @@ var app = new function() {
       this.FetchAll();
     }
   };
+
+// Update
 
   this.Edit = function (item) {
     var el = document.getElementById('edit-todo');
@@ -60,6 +64,8 @@ var app = new function() {
       }
     }
   };
+
+// Delete
 
   this.Delete = function (item) {
     // Delete the current row
