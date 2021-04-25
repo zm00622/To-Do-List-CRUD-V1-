@@ -12,9 +12,18 @@ var app = new function() {
     if (this.tasks.length > 0) {
       for (i = 0; i < this.tasks.length; i++) {
         data += '<tr>';
+
+        // (i+1) sets the task number while this.tasks[i] names the task the user inputs.
         data += '<td>'+(i+1)+". " + this.tasks[i] + '</td>';
+        // Ex: 1. Clean the house
+        // Ex: 2. Workout
+
         data += '<td><button onclick="app.Edit(' + i + ')"  class="btn btn-warning">Edit</button></td>';
+        // app.Edit executes the edit function on button click
+
         data += '<td><button onclick="app.Delete(' + i + ')"  class="btn btn-danger">Delete</button></td>';
+        // app.Delete executes the delete function on button click
+
         data += '</tr>';
       }
     }
@@ -27,7 +36,7 @@ var app = new function() {
 
   this.Add = function () {
     el = document.getElementById('add-todo');
-    // Get the value
+    // Get the value from add-todo text input box
     var task = el.value;
 
     if (task) {
